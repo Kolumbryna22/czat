@@ -11,7 +11,7 @@ class UsersService {
         return this.users.find(user => user.id === userId);
     }
 
-    addUser(uesr) {
+    addUser(user) {
         this.users = [user, ...this.users];
     }
 

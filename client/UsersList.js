@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './UserList.css';
+import styles from './UsersList.css';
 
 const UsersList = props => (
     <div className={styles.Users}>
         <div className={styles.UsersOnline}>
             {props.users.length} people online
         </div>
-        <ul className={styles.UserList}>
+        <ul className={styles.UsersList}>
             {
                 props.users.map((user) => {
                     return (
