@@ -13,6 +13,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {users: [], messages: [], text: '', name: ''};
+
+        this.handleMessageSubmit = this.handleMessageSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -25,7 +27,7 @@ class App extends Component {
     }
 
     handleMessageSubmit(message) {
-        const messages = [message, ...this.setState.messages];
+        const messages = [message, ...this.state.messages];
 
         this.setState({messages});
         socket.emit('message', message);
@@ -39,7 +41,7 @@ class App extends Component {
     messageReceive(message) {
         const messages = [message, ...this.state.messages];
 
-        this.setState({messageReceive});
+        this.setState({messages});
     }
 
     renderLayout() {

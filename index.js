@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
 
         socket.broadcast.emit('message', {
             text: message.text,
-            form: name
+            from: name
         });
     });
 });
